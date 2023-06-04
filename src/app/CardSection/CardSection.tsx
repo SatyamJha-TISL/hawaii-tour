@@ -4,11 +4,11 @@ import styles from "./CardSection.module.scss";
 import { type } from "os";
 
 type HighLights = [];
-type data = {
+type dataVal = {
 
-    title: String,
-    description: String,
-    image: String
+    title: string,
+    description: string,
+    image: string
 
 }
 
@@ -18,7 +18,7 @@ export default async function CardSection(): Promise<JSX.Element> {
 
 
     return (
-        <div className={styles.cardwrap}>{data.map((data: data) => {
+        <div className={styles.cardwrap}>{data.map((data: dataVal) => {
             return <Cards data={data} />
         })}</div>
     )
