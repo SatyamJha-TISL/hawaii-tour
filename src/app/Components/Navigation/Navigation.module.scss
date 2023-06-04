@@ -1,0 +1,115 @@
+@keyframes sidebar {
+    0% {
+        opacity: 0;
+        transform: translate(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+
+.wrapper {
+
+    padding: 0 18rem;
+
+    @media (max-width:1024px) {
+        padding: 0rem;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--white);
+        border-radius: 8px;
+        padding: 2rem;
+        background-color: var(--white);
+
+        @media (max-width:1024px) {
+            border-radius: 0px;
+        }
+
+
+        .logo {
+            width: 20%;
+        }
+
+        .linkwrap {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            font-size: 1.6rem;
+
+            @media(max-width:768px) {
+                justify-content: flex-end;
+            }
+
+
+            .navs {
+                display: flex;
+                gap: 4rem;
+                cursor: pointer;
+
+                @media(max-width:768px) {
+                    display: none;
+                }
+            }
+
+            .button {
+
+                @media(max-width:768px) {
+                    display: none;
+                }
+
+            }
+
+            .hamburg {
+                display: none;
+
+                @media(max-width:768px) {
+                    display: block;
+                    // justify-content: end;
+                }
+
+            }
+        }
+    }
+
+    .sidebar {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        // animation: sidebar 0.5s ease-in;
+        background-color: rgba(0, 0, 0, 0.4);
+        visibility: visible;
+
+        .options {
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: sidebar 0.3s ease-in-out;
+            width: 80vw;
+            background-color: var(--white);
+            height: 100vh;
+            padding: 2rem 2rem 0 4rem;
+
+            .cross {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 6rem;
+            }
+
+            .links {
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+        }
+
+
+
+    }
+}

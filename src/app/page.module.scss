@@ -1,0 +1,35 @@
+.container {
+
+  position: relative;
+
+  .header {
+    padding: 2rem 3rem;
+    background-image: url("/images/background.svg");
+    height: 560px;
+
+
+    // background-size: 100% 100%;
+    @media (max-width:768px) {
+      height: 480px;
+      padding: 0rem
+    }
+
+    .welcome {
+      text-align: center;
+      font-size: 14rem;
+      font-weight: 700;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 6.44%, #FFFFFF 95.08%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: cover;
+
+      @media (max-width:768px) {
+        font-size: 6.4rem;
+
+      }
+
+    }
+
+  }
+}

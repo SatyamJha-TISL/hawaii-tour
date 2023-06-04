@@ -1,0 +1,26 @@
+.button {
+    width: 10.7rem;
+    height: 4rem;
+    border: 1px solid #008080;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.primary {
+    @extend .button;
+    color: var(--green);
+}
+
+.secondary {
+
+    @extend .button;
+    color: var(--white);
+    background-color: var(--green);
+    width: fit-content;
+    padding: 9px 24px 11px 24px;
+
+}

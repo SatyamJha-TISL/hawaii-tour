@@ -1,0 +1,32 @@
+:root {
+  /* --max-width: 1100px;
+  --border-radius: 12px; */
+  --white: #fff ;
+  --welcome:linear-gradient(180deg, rgba(255, 255, 255, 0.5) 6.44%, #FFFFFF 95.08%);
+  --green:#008080;
+  --category-background: #E6F2F2;
+  --dark:#001A1A ;
+  --primary-button-color:#008080;
+  --secondary-background : 
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-size: 10px;
+  color: var(--dark);
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+

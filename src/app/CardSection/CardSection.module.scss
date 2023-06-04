@@ -1,0 +1,13 @@
+.cardwrap {
+    display: flex;
+    gap: 1.7rem;
+    padding: 8.4rem 18.8rem;
+    overflow: scroll;
+
+    @media (max-width:1024px) {
+
+        max-width: 100vw;
+        padding: 8.4rem 1.6rem;
+
+    }
+}
