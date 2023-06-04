@@ -1,5 +1,4 @@
 
-/* @ts-expect-error Async Server Component */
 import Image from "next/image";
 import Button from "../Components/Button/Button";
 import { getCategories } from "../services/services";
