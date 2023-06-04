@@ -30,6 +30,7 @@ export default function RootLayout({
             <div className={styles.welcome}> to Hawaii</div>
           </div>
           {children}
+          {    /* @ts-expect-error Async Server Component */}
           <CategoriesSection />
         </div>
       </body>
