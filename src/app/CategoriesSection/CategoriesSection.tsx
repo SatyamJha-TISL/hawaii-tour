@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "../Components/Button/Button";
 import { getCategories } from "../services/services";
 import styles from "./CategoriesSection.module.scss"
+// import { lazy } from "react";
 
 
 export default async function CategoriesSection() {
@@ -21,7 +22,7 @@ export default async function CategoriesSection() {
             <div className={styles.categories}>
                 <div className={styles.heading}>Categories</div>
                 {
-                    data.map((item: dataVal) => <div className={styles.category}> <div>{item.name} </div> <div> <Image src="/images/arrow_forward.svg" alt='logo' width={16} height={16} /></div> </div>)}
+                    data.map((item: dataVal) => <div className={styles.category}> <div>{item.name} </div> <div> <Image src="/images/arrow_forward.svg" loading="lazy" alt='logo' width={16} height={16} /></div> </div>)}
             </div>
             <div>
                 <div className={styles.heading}>Travel Guide</div>

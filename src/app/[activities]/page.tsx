@@ -1,7 +1,8 @@
+
 import Image from "next/image";
-import { type } from "os";
 import { getActivities } from "../services/services";
 import styles from "./page.module.scss";
+
 
 type Params = {
     params: {
@@ -20,13 +21,15 @@ type data = {
     activities: []
 }
 
+
 export default async function Activities({ params }: Params) {
     const data: data = await getActivities(params.activities);
+
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.image}>
-                <img src={data?.image ?? ""} />
+                <Image src={data?.image ?? ""} alt="image" width="300" height="300" loading="lazy" placeholder="blur" blurDataURL={data?.image} />
             </div>
 
             <div className={styles.other}>
@@ -34,7 +37,7 @@ export default async function Activities({ params }: Params) {
 
                 <div className={styles.description}>{data?.description}</div>
                 <div className={styles.activities}>
-                    {(data || []).activities.map((item: Item, index: number) => {
+                    {(data || [])?.activities?.map((item: Item, index: number) => {
                         return <div key={index} className={styles.item}> {item.name}</div>;
                     })}
                 </div>

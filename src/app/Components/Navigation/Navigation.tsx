@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Button from '../Button/Button';
 import styles from "./Navigation.module.scss"
 
+
 export default function Navigation() {
 
     const [clicked, setClicked] = useState(false)
